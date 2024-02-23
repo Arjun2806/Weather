@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>headerlinks}}
+</head>
+<body>
+   {{>navbar}}
+ 
+ 
+<div class="main_header">
+    <div class="row">
+        <div class="col-md-10 col-12 mx-auto">
+            <div class="row">
+                <div class="col-md-6 col-12 main_header_right align-items-center">
+                    <figure>
+                        <img src="image/about.png" alt="arjun" class="img-fluid" title="Arjun Suthar">
+                    </figure>
+                </div>
+
+
+                <div class="col-md-6 col-12 main_header_left">
+                    <p>Welcome to the Weather App.</p>
+                    <h1>I Am A <span class="text_clr">NodeJs  </span>Developer</h1>
+                    <a ><button id="resume">RESUME</button></a> 
+                </div>  
+            </div>
+        </div>
+    </div>
+</div>   
+
+
+ <footer>
+        <p>
+            created with 😊💜 by Arjun
+        </p>
+    </footer>
+
+</body>
+<script>
+const file = "./R.pdf"
+const download1 = (url) => {
+    const filename = url.split('/').pop();
+    const aTag = document.createElement('a');
+    aTag.href = url;  
+    aTag.setAttribute('download', filename);
+    document.body.appendChild(aTag);
+    aTag.click();
+    aTag.remove();
+};
+const bt = document.getElementById('resume')
+bt.addEventListener('click',()=>{
+    download1(file)
+})
+
+</script>
+
+
+</html>
